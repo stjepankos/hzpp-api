@@ -6,6 +6,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+if __name__ == "__main__":
+    app.run()
+
 TRAIN_ROW_CELL_PARSE_KEYS = {
     0: 'time_departure',
     1: 'id',
@@ -56,7 +59,3 @@ def get_stations():
         {'id': int(station[0]), 'name': station[1]} for station in eval(stations_str)
     ]
     return {'stations': stations}
-
-
-if __name__ == '__main__':
-    app.run()
