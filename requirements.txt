@@ -1,0 +1,5 @@
+bs4
+requests
+flask
+flask_restful
+flask_cors
